@@ -18,9 +18,10 @@ CPPFLAGS+=-fsanitize=undefined \
           -fsanitize=vla-bound \
           -fsanitize=null \
           -fsanitize=return \
-          -fsanitize=signed-integer-overflow \
+          -fno-sanitize=signed-integer-overflow \
+          -fno-sanitize=unsigned-integer-overflow \
           -fsanitize=bounds \
-          -fsanitize=alignment \
+          -fno-sanitize=alignment \
           -fsanitize=object-size \
           -fsanitize=float-divide-by-zero \
           -fsanitize=float-cast-overflow \

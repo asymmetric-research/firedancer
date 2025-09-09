@@ -1,0 +1,17 @@
+diff --git a/validator/src/main.rs b/validator/src/main.rs
+index 2b0f7a3ed1..b405ae5796 100644
+--- a/validator/src/main.rs
++++ b/validator/src/main.rs
+@@ -13,9 +13,9 @@ use {
+     std::{path::PathBuf, process::exit},
+ };
+ 
+-#[cfg(not(any(target_env = "msvc", target_os = "freebsd")))]
+-#[global_allocator]
+-static GLOBAL: Jemalloc = Jemalloc;
++//#[cfg(not(any(target_env = "msvc", target_os = "freebsd")))]
++//#[global_allocator]
++//static GLOBAL: Jemalloc = Jemalloc;
+ 
+ // FIREDANCER: Switch main to be a function that takes arguments, rather than
+ // an actual entrypoint for the binary.

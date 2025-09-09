@@ -542,9 +542,9 @@ index d7c8a12..8cfff9b 100644
 --- a/db/blob/blob_file_meta.h
 +++ b/db/blob/blob_file_meta.h
 @@ -5,6 +5,7 @@
- 
+
  #pragma once
- 
+
 +#include <cstdint>
  #include <cassert>
  #include <iosfwd>
@@ -632,7 +632,11 @@ install () {
   # depend on them.
   rm -rf "$PREFIX/lib/cmake" "$PREFIX/lib/pkgconfig"
 
-  echo "[~] Done!"
+  cd $PREFIX/../agave
+  git reset --hard
+  git apply ../sanitizers.patch
+
+  echo "[~] Done! You can build with handholding, ASAN and UBSAN. The sandbox must be disabled in the config!"
 }
 
 ACTION=0
